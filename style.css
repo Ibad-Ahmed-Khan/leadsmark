@@ -54,6 +54,7 @@
     background: var(--white--clr);
     /* border: 2px solid red; */
     width: 100%;
+    z-index: 1;
 }
 
 .nav__list {
@@ -175,6 +176,7 @@
     border-radius: 1rem;
     transform: translate(0%,80%);
     border: 2px solid var(--white--clr);
+    transform: scale(1);
 }
 
 .hero__animation::before {
@@ -199,12 +201,6 @@
 
 /* services */
 
-.services {
-    display: grid;
-    place-items: center;
-    /* border: 2px solid red; */
-}
-
 .top {
     /* border: 2px solid red; */
     text-align: center;
@@ -212,6 +208,7 @@
     font-size: var(--400--fs);
     letter-spacing: 1px;
     text-transform: capitalize;
+    margin-bottom: 5rem;
 }
 
 .top p {
@@ -220,7 +217,6 @@
 }
 
 .bottom { 
-    height: 70vh; 
     margin-inline: 1rem;
 }
 
@@ -230,7 +226,7 @@
 
 .bottom__box {
     margin-top: 2rem;
-    margin-inline: 2rem;
+    margin-inline: 1rem;
 }
 
 .bottom__box::before {
@@ -251,11 +247,17 @@
 .about {
     margin-top: 4rem;
     margin-inline: 1rem;
+    /* border: 2px solid red; */
 }
+
+.about .top {
+    margin-left: 1rem;
+} 
 
 .about :first-child {
     width: 100%;
     text-align: left;
+    /* border: 1px solid red; */
 }   
 
 .about :first-child > *:nth-child(2) {
@@ -273,15 +275,56 @@
 }
 
 .right__img {
-    width: 26rem;
-    /* border: 2px solid red; */
     display: flex;
-    justify-content: space-between;
+    gap: clamp(1rem,1.3vw,4rem);
 }
 
 .about__img {
-    width: clamp(12rem,22vw,28rem);
-    height: clamp(12rem,22vw,28rem);
+    max-width: 12rem; 
+    height: 12rem;
+}
+
+.about__para > * {
+    margin-top: 1rem;   
 }
 
 /* send__about__section */
+
+
+/* responsive */
+
+@media screen and (min-width:44em) {
+
+    .nav__list {
+        margin-top: .3rem;
+        margin-left: 75%;
+        height: 60vh;
+    }
+
+    .header__checkbox:checked ~ nav {
+        width: 25%;
+    }
+
+    .nav__li {
+        position: relative;
+        right: 2rem;
+    }
+
+    .bottom {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        /* border: 2px solid red; */
+        gap: 3rem;
+    }
+
+    .about__right {
+        position: relative;
+        z-index: -100;
+        bottom: 10rem;
+        width: 200%;
+    }
+
+
+}
+
+/* end__responsive */
