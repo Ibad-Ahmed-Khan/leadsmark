@@ -174,7 +174,7 @@ html {
     background: url(./imgs/header.jpg) center;
     background-size: cover;
     background-blend-mode: multiply;
-    background-color: rgba(0, 0, 0, 0.524);
+    background-color: rgba(0, 0, 0, 0.638);
 }
 
 .hero h1,
@@ -214,15 +214,20 @@ html {
     height: 6px;
     background: var(--white--clr);
     margin-left: 9px;
-    animation: mymove 1.3s ease-in-out;
+    animation: fadeout 1.4s ease-in-out;
     animation-iteration-count: infinite;
-    opacity: 0.6;
 }
 
 
-@keyframes mymove {
-    from {transform: translateY(120%);}
-    to {transform: translateY(300%);}
+  @keyframes fadeout {
+    from {
+        transform: translateY(120%);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(340%);
+        opacity: 0;
+    }
   }
 
 /* end__hero__section */
