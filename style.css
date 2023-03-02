@@ -108,7 +108,7 @@ html {
     top: 35rem;
     left: 0;
     background: var(--white--clr);  
-    clip-path: ellipse(55% 100% at 50% 100%) ;
+    clip-path: ellipse(53% 90% at 50% 120%) ;
 }
 
 .hero::before {
@@ -151,19 +151,40 @@ html {
 
 .header__label span:nth-child(1) {
     top: 1px;
+    transition: all .4s ease-in-out;
 }
 
 .header__label span:nth-child(2) {
     top: 9px;
+    transition: all .4s ease-in-out;
 }
 
 .header__label span:nth-child(3) {
     top: 17px;
+    transition: all .4s ease-in-out;
 }
 
 .header__checkbox:checked ~ nav {
     transform: scale(1,1);
     background: var(--gray--clr);
+    transition: all .4s ease-in-out;
+}
+
+.header__checkbox:checked ~ .header__label span:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 1rem;
+    width: 2rem;
+}
+
+.header__checkbox:checked ~ .header__label span:nth-child(2) {
+    display: none;
+}
+
+.header__checkbox:checked ~ .header__label span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    width: 2rem;
 }
 
 /* end__hamburger */
@@ -222,7 +243,6 @@ html {
   @keyframes fadeout {
     from {
         transform: translateY(120%);
-        opacity: 1;
     }
     to {
         transform: translateY(340%);
@@ -297,6 +317,10 @@ html {
     /* border: 2px solid red; */
     text-align: left;
     height: 170vh;
+}
+
+.about .top {
+    text-align: left;
 }
 
 .about .top p {
