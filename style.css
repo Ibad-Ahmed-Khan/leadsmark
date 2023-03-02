@@ -50,6 +50,14 @@ html {
     font-weight: bold;
 }
 
+.gray {
+    color: var(--gray--clr);
+}
+
+.normal-fs {
+    font-size: var(--200--fs);
+}
+
 /* end__again__and__again */
 
 
@@ -421,6 +429,44 @@ html {
 
 /* end__blog */
 
+
+/* testmonial */
+
+
+.testmonials {
+    height: 150vh;
+}
+
+.avatar__img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.testmonials__bottom > * {
+    margin-inline: 2rem;
+    margin-top: 5rem;
+}
+
+.card__top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card__top > * {
+    text-transform: capitalize;
+    color: var(--gray--clr);
+}
+
+.card__bottom {
+    color: var(--gray--clr);
+    margin-top: 1rem;
+}
+
+
+/* end__testmonial */
+
 /* responsive */
 
 @media screen and (min-width:51em) {
@@ -448,7 +494,8 @@ html {
         bottom: 1rem;
     }
 
-    .services__bottom {
+    .services__bottom
+     {
         margin-top: 4rem;
         display: grid;
         grid-template-columns: repeat(3,1fr);
@@ -479,10 +526,16 @@ html {
         height: 12rem;
     }
 
+    .testmonials__bottom {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
     .services,
     .about,
     .portfolio,
-    .blog
+    .blog,
+    .testmonials
      {
         height: 100vh;
     }
